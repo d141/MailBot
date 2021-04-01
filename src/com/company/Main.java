@@ -56,15 +56,15 @@ public class Main {
                 final String password = "";//change accordingly
 
                 // Assuming you are sending email through relay.jangosmtp.net
-                String host = "secure244.inmotionhosting.com";
+                String host = "";//Change to server name
 
                 Properties props = new Properties();
-                props.put("mail.smtp.localhost", "sales.logoknits.com");
+                props.put("mail.smtp.localhost", "");//change to domain name
                 props.put("mail.smtp.auth", "true");
-                props.put("mail.smtp.ssl.trust", "secure244.inmotionhosting.com");
+                props.put("mail.smtp.ssl.trust", "");//Change to server name
                 props.put("mail.smtp.starttls.enable", "true");
                 props.put("mail.smtp.host", host);
-                props.put("mail.smtp.port", "587");
+                props.put("mail.smtp.port", "");//Change to outgoing port #
 
                 // Get the Session object.
                 Session session = Session.getInstance(props,
@@ -85,7 +85,7 @@ public class Main {
                     message.setRecipients(Message.RecipientType.TO,
                             InternetAddress.parse(to));
                 //    String company = contacts.get(i)[3];
-                    String subject = "Custom Knit Mascot Blankets";
+                    String subject = "";//Change accordingly
                     // Set Subject: header field
                     message.setSubject(subject);
 
